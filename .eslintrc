@@ -32,7 +32,7 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": [
-      "error",
+      1,
       {
         "ignoreRestArgs": true
       }

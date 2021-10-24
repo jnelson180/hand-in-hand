@@ -9,63 +9,7 @@ import './DonorHome.scss'
 import Wave from "../../assets/Wave.svg"
 import { ReactComponent as Kindness } from "../../assets/Kindness.svg";
 import { ReactComponent as HeartMessage } from "../../assets/HeartMessage.svg";
-import Opportunity1 from "../../assets/Opportunity1.png";
-import Opportunity2 from "../../assets/Opportunity2.png";
-import Opportunity3 from "../../assets/Opportunity3.png";
-import Opportunity4 from "../../assets/Opportunity4.png";
-import Opportunity5 from "../../assets/Opportunity5.png";
-
-interface IOpportunity {
-  id: string;
-  image: string;
-  location: string;
-  topic: string;
-  title: string;
-  alt: string;
-}
-
-const opportunities = [
-  {
-    id: "1",
-    image: Opportunity1,
-    location: "India",
-    topic: "Social Justice",
-    title: "Stop Violence Against Women In India",
-    alt: "A group of Indian women smiling",
-  },
-  {
-    id: "2",
-    image: Opportunity2,
-    location: "India",
-    topic: "Economic Growth",
-    title: "Help Rural Women Gain Essential Business Skills",
-    alt: "A photo taken inside of a clothing shop",
-  },
-  {
-    id: "3",
-    image: Opportunity3,
-    location: "India",
-    topic: "Digital Literacy",
-    title: "Encourage Indian Women To Develop A Career In Tech",
-    alt: "A group of women seated at computers",
-  },
-  {
-    id: "4",
-    image: Opportunity4,
-    location: "India",
-    topic: "Art",
-    title: "Provide Instruments For Under-Served Children In India",
-    alt: "A group of children playing instruments",
-  },
-  {
-    id: "5",
-    image: Opportunity5,
-    location: "India",
-    topic: "Local Disaster",
-    title: "Refugee Crisis Fund",
-    alt: "A man helping clean at a disaster site",
-  },
-];
+import { useGetOpportunities } from '../../hooks/useGetOpportunities';
 
 interface IDonorHomeProps extends RouteComponentProps {
   // TODO
@@ -73,6 +17,8 @@ interface IDonorHomeProps extends RouteComponentProps {
 
 // https://www.figma.com/file/dfnnwc8tbQ9lDAxEpBBepb/WV-Prototype?node-id=1498%3A6561
 const DonorHome: FunctionComponent<IDonorHomeProps> = (props: IDonorHomeProps) => {
+  const opportunities = useGetOpportunities();
+  
   return (
     <div className="DonorHome">
       <Header mainContent={(
