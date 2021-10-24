@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 import React, { FunctionComponent } from 'react'
+// eslint-disable-next-line
 import { RouteComponentProps } from 'react-router';
 import DonorHero from '../../components/DonorHero/DonorHero';
 import Header from '../../components/Header/Header';

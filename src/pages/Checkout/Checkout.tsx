@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 import React, { FunctionComponent } from 'react'
+// eslint-disable-next-line
 import { RouteComponentProps } from 'react-router';
 import './Checkout.scss'
 

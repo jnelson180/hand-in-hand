@@ -1,81 +1,28 @@
 @import "../../index.scss";
 
-.full-width {
-    width: 100vw;
-    height: 100%;
+.Login {
 }
 
-.supertext {
-    font-size: 13px;
-}
-
-.landing-background {
-    position: relative;
-}
-
-.heading-1 {
-    font-size: 47px;
-}
-
-.landing-cta {
-    @extend .heading-1;
-    position: absolute;
-    left: 17%;
-    top: 12%;
-}
-
-.heading-primary {
-    @extend .heading-1;
-    color: $primary;
-}
-
-.heading-light {
-    @extend .heading-1;
-    color: $light;
-}
-
-.heading-darkpurple {
-    @extend .heading-1;
-    color: $darkPurple;
-}
-
-.main-box {
+.loginform {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
     border: 2px solid white;
     text-align: center;
     background-color: #695E8B;
     opacity: 1;
-    margin: auto;
+    margin: 10% 33% 10%;
     border-radius: 15px 50px;
 }
 
-.main-box-button {
-    margin-right: 47px !important;
+input {
+    border-radius: 25px;
+    border: 2px solid white;
+    width: 300px;
+    height: 25px;
 }
 
-.login-button {
-    background-color: $primary !important;
-    padding: 8px 48px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.5s;
-    margin: auto;
-}
-
-.login-button:hover {
+.login {
     color: white;
     background-color: $primary;
-}
-
-.partner-button {
-    color: $darkPurple !important;
-    background-color: $light !important;
-    padding: 8px 48px;
-    border-radius: 10px;
-    font-weight: bold;
-    transition: 0.5s;
-}
-
-.partner-button:hover {
-    color: $primary;
-    background-color: white;
+    border: 2px solid $primary;
 }
