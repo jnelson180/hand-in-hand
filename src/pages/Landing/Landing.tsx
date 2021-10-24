@@ -1,4 +1,6 @@
+// eslint-disable-next-line
 import React, { FunctionComponent } from 'react'
+// eslint-disable-next-line
 import { RouteComponentProps } from 'react-router';
 import Header from '../../components/Header/Header';
 import './Landing.scss'
