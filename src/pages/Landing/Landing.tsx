@@ -1,9 +1,9 @@
 import React, { FunctionComponent } from 'react'
 import { RouteComponentProps } from 'react-router';
 import Header from '../../components/Header/Header';
-import LandingBackground from "../../assets/LandingBackground.jpg";
 import './Landing.scss'
-import Card from '../../components/Card/Card';
+import DonorHero from '../../components/DonorHero/DonorHero';
+import { ReactComponent as Languages } from "../../assets/Languages.svg";
 
 interface ILandingProps extends RouteComponentProps {
   // TODO
@@ -41,21 +41,15 @@ const tiles: ITile[] = [
 // https://www.figma.com/file/dfnnwc8tbQ9lDAxEpBBepb/WV-Prototype?node-id=1498%3A6080
 const Landing: FunctionComponent<ILandingProps> = (props: ILandingProps) => (
   <main className="Landing">
-    <Header />
-    <section className="landing-background" style={{
-      background: `url(${LandingBackground})`,
-      height: 1039,
-    }}>
-      <h1 className="landing-cta heading-light main-box">
-        <div className="cta">
-          Hand-in-Hand<sup className="supertext">TM</sup><br />
-          Partner with us to solve<br />
-          problems around the world.
-        </div>
-        <button className="login-button main-box-button" type="button">LOGIN</button>
-        <button className="signup-button main-box-button" type="button">SIGN UP</button>
-      </h1>
-    </section>
+    <Header mainContent={(
+      <>
+        <strong className="strongtext margin-right">Donate to World Vision</strong>
+        <button className="margin-right" type="button">Partner</button>
+        <button className="margin-right" type="button">Log in</button>
+        <Languages />
+      </>
+    )} />
+    <DonorHero />
     <section>
       <h1 className="heading-primary">What do we believe in?<br />
         <span className="heading-darkpurple">

@@ -1,5 +1,7 @@
 import React, { FunctionComponent } from 'react'
 import { RouteComponentProps } from 'react-router';
+import DonorHero from '../../components/DonorHero/DonorHero';
+import Header from '../../components/Header/Header';
 import './DonorHome.scss'
 
 interface IDonorHomeProps extends RouteComponentProps {
@@ -9,7 +11,12 @@ interface IDonorHomeProps extends RouteComponentProps {
 // https://www.figma.com/file/dfnnwc8tbQ9lDAxEpBBepb/WV-Prototype?node-id=1498%3A6561
 const DonorHome: FunctionComponent<IDonorHomeProps> = (props: IDonorHomeProps) => (
   <div className="DonorHome">
-    DonorHome Component
+    <Header mainContent={(
+      <> 
+        <strong>My plan:&nbsp;</strong> Donor [Donor icon with alert count]
+      </>
+    )} />
+    <DonorHero />
   </div>
 );
 
