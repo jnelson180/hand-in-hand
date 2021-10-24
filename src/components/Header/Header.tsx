@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.scss';
 import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
@@ -16,7 +17,9 @@ const Header = ({
       <div className="primary-bar" />
       <div className="light-bar">
         <div>
-          <Logo />
+          <Link to="/">
+            <Logo />
+          </Link>
         </div>
         <div className="light-bar">
           { mainContent }
