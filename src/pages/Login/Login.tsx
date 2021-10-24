@@ -4,6 +4,7 @@ import React, { FunctionComponent } from 'react'
 import { RouteComponentProps } from 'react-router';
 import { useHistory } from "react-router-dom";
 import Header from '../../components/Header/Header';
+import Button from '../../components/Button/Button';
 import './Login.scss'
 import { ReactComponent as Languages } from "../../assets/Languages.svg";
 
@@ -25,8 +26,8 @@ const Login: FunctionComponent<ILoginProps> = (props: ILoginProps) => {
       <Header mainContent={(
         <>
           <strong className="strongtext margin-right">Donate to World Vision</strong>
-          <button className="margin-right" type="button">Partner</button>
-          <button className="margin-right" type="button">Log in</button>
+          <Button className="margin-right partner-button main-box-button" type="button">Partner</Button>
+          <Button to="/login" className="margin-right login-button main-box-button" type="button">Log in</Button>
           <Languages />
         </>
       )} />
