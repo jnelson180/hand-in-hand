@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.scss'
 import AppRouter from './AppRouter'
 import 'bootstrap/dist/css/bootstrap.css';
+import './index.scss'
 
 // Single-page application (SPA)
 ReactDOM.render(<AppRouter />, document.getElementById('root'))
