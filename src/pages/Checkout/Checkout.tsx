@@ -7,12 +7,10 @@ interface ICheckoutProps extends RouteComponentProps {
 }
 
 // https://www.figma.com/file/dfnnwc8tbQ9lDAxEpBBepb/WV-Prototype?node-id=1247%3A2045
-const Checkout: FunctionComponent<ICheckoutProps> = (props: ICheckoutProps) => {
-  return (
-    <div className="Checkout">
-      Checkout Component
-    </div>
-  );
-}
+const Checkout: FunctionComponent<ICheckoutProps> = (props: ICheckoutProps) => (
+  <div className="Checkout">
+    Checkout Component
+  </div>
+);
 
 export default Checkout;
