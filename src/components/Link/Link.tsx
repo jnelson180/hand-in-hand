@@ -1,10 +1,11 @@
 import React from 'react';
+import { NavLink, NavLinkProps } from 'react-router-dom';
 import './Link.scss';
 
-const Link = () => (
-  <div className="Link">
-    Link Component
-  </div>
+interface INavLinkProps extends NavLinkProps {};
+
+const Link = (props: INavLinkProps) => (
+  <NavLink { ...props } />
 );
 
 export default Link;
