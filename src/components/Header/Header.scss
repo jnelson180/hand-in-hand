@@ -26,6 +26,7 @@
     background: $darkPurple;
     height: 61px;
     color: $light;
+    position: relative;
 }
 
 .donate-text {
@@ -36,4 +37,9 @@
 // todo: don't do this explicitly; use grid or flexbox
 .margin-right {
     margin-right: 43px;
+}
+
+.nav-content-before {
+    position: absolute;
+    left: 20px;
 }

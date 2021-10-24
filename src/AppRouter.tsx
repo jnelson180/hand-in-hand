@@ -19,7 +19,7 @@ const AppRouter = () => (
           <Route exact path="/login" component={Login} />
           <Route exact path="/donor-home" component={DonorHome} />
           <Route exact path="/find-requests" component={FindRequests} />
-          <Route exact path="/checkout" component={Checkout} />
+          <Route path="/checkout/:id" component={Checkout} />
         </Switch>
       </Provider>
     </Suspense>
