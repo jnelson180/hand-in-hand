@@ -1,0 +1,12 @@
+@import "../../index.scss";
+
+.donor-hero-cta {
+    @extend .heading-1;
+    position: absolute;
+    left: 17%;
+    top: 12%;
+}
+
+.donor-hero-background {
+    position: relative;
+}

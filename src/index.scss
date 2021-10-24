@@ -11,3 +11,32 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+// shared classes 
+.supertext {
+  font-size: 13px;
+}
+
+.heading-1 {
+  font-size: 47px;
+}
+
+.heading-primary {
+  @extend .heading-1;
+  color: $primary;
+}
+
+.heading-light {
+  @extend .heading-1;
+  color: $light;
+}
+
+.heading-darkpurple {
+  @extend .heading-1;
+  color: $darkPurple;
+}
+
+.full-width {
+  width: 100vw;
+  height: 100%;
+}
