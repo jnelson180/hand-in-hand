@@ -6,15 +6,14 @@ import { useHistory } from "react-router-dom";
 import './Checkout.scss'
 import Header from '../../components/Header/Header';
 import Button from "../../components/Button/Button";
+import { useGetOpportunity } from '../../hooks/useGetOpportunities';
 
-interface ICheckoutProps extends RouteComponentProps {
-  // TODO
-}
+interface ICheckoutProps extends RouteComponentProps {}
 
 // https://www.figma.com/file/dfnnwc8tbQ9lDAxEpBBepb/WV-Prototype?node-id=1247%3A2045
 const Checkout: FunctionComponent<ICheckoutProps> = (props: ICheckoutProps) => {
   const history = useHistory();
-
+  const opportunity = useGetOpportunity((props?.match?.params as any)?.id);
   const goBack = (_evt) => {
     history.goBack();
   }
@@ -39,7 +38,7 @@ const Checkout: FunctionComponent<ICheckoutProps> = (props: ICheckoutProps) => {
         </div>
       )} />
       <div className="checkout-content">
-        Content
+        <pre>{ JSON.stringify(opportunity, undefined, 2) }</pre>
       </div>
     </div>
   );
