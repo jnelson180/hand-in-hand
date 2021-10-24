@@ -1,9 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
 @import "styles/variables";
 @import "styles/mixins";
 
 body {
   margin: 0;
-  font-family: 'Lora', serif;
+  font-family: 'Lora', serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -34,6 +35,11 @@ code {
 .heading-darkpurple {
   @extend .heading-1;
   color: $darkPurple;
+}
+
+.heading-lightpurple {
+  @extend .heading-1;
+  color: $lightPurple;
 }
 
 .full-width {

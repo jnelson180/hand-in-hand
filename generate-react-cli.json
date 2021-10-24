@@ -71,18 +71,6 @@
       "withStory": false,
       "withLazy": false
     },
-    "materialui": {
-      "customTemplates": {
-        "component": "templates/materialui/TemplateName.tsx",
-        "style": "templates/component/TemplateName.scss",
-        "test": "templates/component/TemplateName.test.tsx"
-      },
-      "path": "src/components",
-      "withStyle": true,
-      "withTest": true,
-      "withStory": false,
-      "withLazy": false
-    },
     "widget": {
       "customTemplates": {
         "component": "templates/widget/TemplateName.tsx",
