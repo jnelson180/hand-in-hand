@@ -42,6 +42,15 @@ There are also some shared styles in `/styles` and `index.scss` in `src`.
 
 In order to get started with your first commit, please clone into this repo and create a feature branch (`git checkout -b my-feature`). Once your work is ready for review, feel free to push the branch and open a PR.
 
+# Resources
+The resources to get started can be found in Figma:
+- [Prototype / Workflows](https://www.figma.com/proto/dfnnwc8tbQ9lDAxEpBBepb/WV-Prototype?node-id=797%3A900&scaling=scale-down&page-id=0%3A1&starting-point-node-id=797%3A900)
+- [Figma Design Details](https://www.figma.com/file/dfnnwc8tbQ9lDAxEpBBepb/WV-Prototype?node-id=0%3A1)
+
+And more information can be found here:
+- [User stories](https://docs.google.com/spreadsheets/d/1WLEfA0okvAuKTP5jBJIrn0eTC8xJgg7Z5GRYDWda8O8/edit#gid=1403561815)
+- [Project brief](https://drive.google.com/file/d/13gWUTP7oPybXyBPWZU2ooFPcOtvKGFQd/view?usp=sharing)
+  
 # Template
 This project was started by the Must Have Libraries CRA template. 
 
