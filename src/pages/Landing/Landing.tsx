@@ -7,35 +7,39 @@ import './Landing.scss'
 import DonorHero from '../../components/DonorHero/DonorHero';
 import Button from '../../components/Button/Button';
 import { ReactComponent as Languages } from "../../assets/Languages.svg";
+import Globe from "../../assets/Globe.png";
+import Handshake from "../../assets/Handshake.png";
+import Building from "../../assets/Building.png";
+import Community from "../../assets/Community.png";
 
 interface ILandingProps extends RouteComponentProps {
   // TODO
 }
 
 interface ITile {
-  icon: string;
+  image: string;
   title: string;
   description: string;
 };
 
 const tiles: ITile[] = [
   {
-    icon: "[*]", // todo
+    image: Handshake,
     title: "Social Agents",
     description: "Nonprofits, Christian Ministries and School Directories apply and join WorldVision as social agents to make valuable connections, to find skilled, problem-solving volunteers and to reach funds for their projects.",
   },
   {
-    icon: "[*]", // todo
+    image: Community,
     title: "Community Donors",
     description: "You can find causes, ministries, and challenges you personally identify with and help reach their goals with your talents and resources. You feel great by safely getting involved in specific needs, knowing how your money is put to work.",
   },
   {
-    icon: "[*]", // todo
+    image: Building,
     title: "Corporate Donors",
     description: "Generous companies and their employees further support high-impact projects with donations and grants, helping local communities thrive.",
   },
   {
-    icon: "[*]", // todo
+    image: Globe,
     title: "Our Impact",
     description: "We envision global communities and individuals coming together, at their capacity, for a better world. We believe in systematic change across global, national, and local levels; and we will partner so that together we can achieve more than we could on our own.",
   },
@@ -53,7 +57,7 @@ const Landing: FunctionComponent<ILandingProps> = (props: ILandingProps) => (
       </>
     )} />
     <DonorHero />
-    <section>
+    <section id="landing-content">
       <h1 className="heading-primary">What do we believe in?<br />
         <span className="heading-darkpurple">
           Everyone can be a philanthropist.<br />
@@ -61,18 +65,11 @@ const Landing: FunctionComponent<ILandingProps> = (props: ILandingProps) => (
         </span>
       </h1>
       {/* TODO: factor this out into the Card component? And factor out styles into scss */}
-      <div style={{
-        width: "60%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "space-between"
-      }}>
+      <div className="tile-container">
         { tiles.map((tile: ITile) => (
-          <div key={ tile.title } style={{
-
-          }}> 
-            { tile.icon }<br />
-            <strong>{ tile.title }</strong><br />
+          <div key={ tile.title } className="tile-content"> 
+            <img src={ tile.image } className="tile-image" /><br />
+            <div className="tile-title">{ tile.title }</div><br />
             <span>{ tile.description }</span><br />
           </div>
         ))}

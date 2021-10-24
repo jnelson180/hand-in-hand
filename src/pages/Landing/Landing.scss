@@ -74,10 +74,41 @@
     border-radius: 10px;
     font-weight: bold;
     transition: 0.5s;
-    border: 1px solid $darkPurple !important;
+    border: 1px solid $lightGray !important;
 }
 
 .partner-button:hover {
     color: $primary;
     background-color: white;
+}
+
+#landing-content {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 90px;
+}
+
+.tile-container {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.tile-title {
+    font-weight: 700;
+    color: $darkPurple;
+    font-size: 40px;
+    min-height: 120px;  
+    margin-top: 14px;
+}
+
+.tile-image {
+    width: 51px;
+    height: 51px;
+}
+
+.tile-content {
+    margin-right: 40px;
 }
