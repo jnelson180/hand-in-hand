@@ -2,17 +2,47 @@
 import React, { FunctionComponent } from 'react'
 // eslint-disable-next-line
 import { RouteComponentProps } from 'react-router';
+import { useHistory } from "react-router-dom";
 import './Checkout.scss'
+import Header from '../../components/Header/Header';
+import Button from "../../components/Button/Button";
 
 interface ICheckoutProps extends RouteComponentProps {
   // TODO
 }
 
 // https://www.figma.com/file/dfnnwc8tbQ9lDAxEpBBepb/WV-Prototype?node-id=1247%3A2045
-const Checkout: FunctionComponent<ICheckoutProps> = (props: ICheckoutProps) => (
-  <div className="Checkout">
-    Checkout Component
-  </div>
-);
+const Checkout: FunctionComponent<ICheckoutProps> = (props: ICheckoutProps) => {
+  const history = useHistory();
+
+  const goBack = (_evt) => {
+    history.goBack();
+  }
+
+  return (
+    <div className="Checkout">
+      <Header mainContent={(
+        <>
+          <strong>My plan:&nbsp;</strong> Donor [Donor icon with alert count]
+        </>
+      )}
+      navContentBefore={(
+        // todo: change this out for a Button
+        <div 
+          onClick={goBack} 
+          tabIndex={0} 
+          onKeyDown={goBack} 
+          role="button" 
+          className="btn btn-link back-button"
+        >
+          {`< Back`}
+        </div>
+      )} />
+      <div className="checkout-content">
+        Content
+      </div>
+    </div>
+  );
+};
 
 export default Checkout;

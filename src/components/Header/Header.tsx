@@ -5,12 +5,12 @@ import { ReactComponent as Logo } from '../../assets/Logo.svg';
 
 interface IHeaderProps {
   mainContent?: React.ReactElement | null;
-  navContent?: React.ReactElement | null;
+  navContentBefore?: React.ReactElement | null;
 }
 
 const Header = ({
   mainContent = null,
-  navContent = null,
+  navContentBefore = null,
 }: IHeaderProps) => {
   return (
     <div className="top-bar">
@@ -26,6 +26,7 @@ const Header = ({
         </div>
       </div>
       <div className="dark-purple-bar">
+        <div className="nav-content-before">{ navContentBefore }</div> 
         Global Issues | Poorest Countries | Top 10 Rated Projects | Disaster Areas | Local Map
       </div>
     </div>

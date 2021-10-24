@@ -1,2 +1,16 @@
-.Checkout {
+@import "../../index.scss";
+
+.back-button {
+    background: none !important;
+    border: none !important;
+    color: $light !important;
+    text-decoration: none !important;
+}
+
+.checkout-content {
+    min-height: 100vh;
+    width: auto;
+    background-color: $backgroundGray;
+    margin-right: 20%;
+    margin-left: 20%;
 }

@@ -4,6 +4,7 @@ import React, { FunctionComponent } from 'react'
 import { RouteComponentProps } from 'react-router';
 import DonorHero from '../../components/DonorHero/DonorHero';
 import Header from '../../components/Header/Header';
+import Button from "../../components/Button/Button";
 import './DonorHome.scss'
 import Wave from "../../assets/Wave.svg"
 import { ReactComponent as Kindness } from "../../assets/Kindness.svg";
@@ -72,7 +73,6 @@ interface IDonorHomeProps extends RouteComponentProps {
 
 // https://www.figma.com/file/dfnnwc8tbQ9lDAxEpBBepb/WV-Prototype?node-id=1498%3A6561
 const DonorHome: FunctionComponent<IDonorHomeProps> = (props: IDonorHomeProps) => {
-  console.log("render")
   return (
     <div className="DonorHome">
       <Header mainContent={(
@@ -98,14 +98,16 @@ const DonorHome: FunctionComponent<IDonorHomeProps> = (props: IDonorHomeProps) =
         <h1 className="heading-1 heading-lightpurple">Donation opportunities: Suggested for you</h1>
         <div className="opportunity-cards">
           {opportunities.map((opportunity) => (
-            <div key={opportunity.id} className="opportunity-card">
-              <img src={opportunity.image} className="opportunity-image" alt={ opportunity.alt } />
-              <span>
-                <span className="opportunity-location">{opportunity.location} •&nbsp;</span>
-                <span className="opportunity-topic">{opportunity.topic}</span><br />
-              </span>
-              <span className="opportunity-title">{opportunity.title}</span>
-            </div>
+            <Button to={`/checkout/${ opportunity.id }`} key={opportunity.id} className="btn btn-link opportunity-link">
+              <div className="opportunity-card">
+                <img src={opportunity.image} className="opportunity-image" alt={ opportunity.alt } />
+                <span>
+                  <span className="opportunity-location">{opportunity.location} •&nbsp;</span>
+                  <span className="opportunity-topic">{opportunity.topic}</span><br />
+                </span>
+                <span className="opportunity-title">{opportunity.title}</span>
+              </div>
+            </Button>
           ))}
         </div>
       </div>
