@@ -38,3 +38,42 @@
     @extend .heading-1;
     color: $darkPurple;
 }
+
+.main-box {
+    border: 2px solid white;
+    text-align: center;
+    background-color: #695E8B;
+    opacity: 1;
+    margin: auto;
+    border-radius: 15px 50px;
+}
+
+.login-button {
+    color: $primary;
+    background-color: white;
+    padding: 8px 48px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+    margin: auto;
+}
+
+.login-button:hover {
+    color: white;
+    background-color: $primary;
+}
+
+.signup-button {
+    color: white;
+    background-color: $primary;
+    padding: 8px 48px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.5s;
+    margin: auto;
+}
+
+.signup-button:hover {
+    color: $primary;
+    background-color: white;
+}
