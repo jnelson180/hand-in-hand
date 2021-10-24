@@ -45,8 +45,8 @@ const Landing: FunctionComponent<ILandingProps> = (props: ILandingProps) => (
     <Header mainContent={(
       <>
         <strong className="strongtext margin-right">Donate to World Vision</strong>
-        <Button className="margin-right" type="button">Partner</Button>
-        <Button className="margin-right" type="button">Log in</Button>
+        <Button className="margin-right partner-button main-box-button" type="button">Partner</Button>
+        <Button to="/login" className="margin-right login-button main-box-button" type="button">Log in</Button>
         <Languages />
       </>
     )} />

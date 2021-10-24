@@ -48,9 +48,12 @@
     border-radius: 15px 50px;
 }
 
+.main-box-button {
+    margin-right: 47px !important;
+}
+
 .login-button {
-    color: $primary;
-    background-color: white;
+    background-color: $primary !important;
     padding: 8px 48px;
     border-radius: 10px;
     font-weight: bold;
@@ -63,17 +66,16 @@
     background-color: $primary;
 }
 
-.signup-button {
-    color: white;
-    background-color: $primary;
+.partner-button {
+    color: $darkPurple !important;
+    background-color: $light !important;
     padding: 8px 48px;
     border-radius: 10px;
     font-weight: bold;
     transition: 0.5s;
-    margin: auto;
 }
 
-.signup-button:hover {
+.partner-button:hover {
     color: $primary;
     background-color: white;
 }
