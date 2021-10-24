@@ -7,6 +7,7 @@ import Header from '../../components/Header/Header';
 import Button from '../../components/Button/Button';
 import './Login.scss'
 import { ReactComponent as Languages } from "../../assets/Languages.svg";
+import LandingBackground from "../../assets/LandingBackground.jpg";
 
 interface ILoginProps extends RouteComponentProps {
   // TODO
@@ -22,28 +23,32 @@ const Login: FunctionComponent<ILoginProps> = (props: ILoginProps) => {
   }
 
   return (
-    <main className="Login">
+    <main className="login-page">
       <Header mainContent={(
         <>
           <strong className="strongtext margin-right">Donate to World Vision</strong>
           <Button className="margin-right partner-button main-box-button" type="button">Partner</Button>
-          <Button to="/login" className="margin-right login-button main-box-button" type="button">Log in</Button>
           <Languages />
         </>
       )} />
-      <div className="loginform">
-        <h5>
-          Login<br />
-          Don't have an account? Sign up.<br />
-        </h5>
-        <form onSubmit={handleLogin}>
-          <input type="email" id="email" name="email" placeholder=" example@email.com" /><br /><br />
-          <input type="password" id="password" name="password" placeholder=" **********" /><br /><br />
-          <input type="submit" className="login" value="LOGIN" /><br />
-        </form>
-        <h5>
-          Forgot your password? Get it back.<br /><br />
-        </h5>
+      <div className="loginContainer" style={{
+        background: `url(${LandingBackground})`,
+        height: 1039,
+      }}>
+        <div className="loginform">
+          <h5>
+            Login<br />
+            Don't have an account? Sign up.<br />
+          </h5>
+          <form onSubmit={handleLogin}>
+            <input type="email" id="email" name="email" placeholder=" example@email.com" /><br /><br />
+            <input type="password" id="password" name="password" placeholder=" **********" /><br /><br />
+            <input type="submit" className="login" value="LOGIN" /><br />
+          </form>
+          <h5>
+            Forgot your password? Get it back.<br /><br />
+          </h5>
+        </div>
       </div>
     </main>
   );
