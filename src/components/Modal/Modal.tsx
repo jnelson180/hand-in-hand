@@ -1,10 +1,10 @@
 import React from 'react';
+import BootstrapModal, { ModalProps} from "react-bootstrap/Modal";
 import './Modal.scss';
 
-const Modal = () => (
-  <div className="Modal">
-    Modal Component
-  </div>
+interface IModalProps extends ModalProps {};
+const Modal = (props: IModalProps) => (
+  <BootstrapModal { ...props } />
 );
 
 export default Modal;

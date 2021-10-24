@@ -60,7 +60,6 @@ Out of the box, it gives us the following features:
 - Type Checker - TypeScript ^4.2.3
 - Preprocessors - Sass/SCSS
 - State management - Redux Toolkit, Recoil
-- CSS Framework - Material-UI
 - CSS-in-JS Modules — Styled Components
 - Router - React Router
 - Unit Testing - Jest & Enzyme + Sinon
@@ -69,6 +68,10 @@ Out of the box, it gives us the following features:
 - Generate templates
 - Format & Lint - ESLint & Prettier
 - Useful utilities - Moment, Classnames, Serve, react-snap, React-Helmet, Analyzer Bundle, react-uuid.
+
+And we have added the following libraries:
+- bootstrap ^5.1.3
+- react-bootstrap ^2.0.0
 
 ## Run Scripts
 

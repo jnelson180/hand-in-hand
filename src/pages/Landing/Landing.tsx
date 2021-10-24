@@ -3,6 +3,7 @@ import { RouteComponentProps } from 'react-router';
 import Header from '../../components/Header/Header';
 import './Landing.scss'
 import DonorHero from '../../components/DonorHero/DonorHero';
+import Button from '../../components/Button/Button';
 import { ReactComponent as Languages } from "../../assets/Languages.svg";
 
 interface ILandingProps extends RouteComponentProps {
@@ -44,8 +45,8 @@ const Landing: FunctionComponent<ILandingProps> = (props: ILandingProps) => (
     <Header mainContent={(
       <>
         <strong className="strongtext margin-right">Donate to World Vision</strong>
-        <button className="margin-right" type="button">Partner</button>
-        <button className="margin-right" type="button">Log in</button>
+        <Button className="margin-right" type="button">Partner</Button>
+        <Button className="margin-right" type="button">Log in</Button>
         <Languages />
       </>
     )} />
