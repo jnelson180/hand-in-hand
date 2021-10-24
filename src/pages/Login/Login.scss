@@ -1,5 +1,10 @@
 @import "../../index.scss";
 
+.login-page {
+    display: flex;
+    flex-direction: column;
+}
+
 .loginform {
     color: white;
     font-family: Arial, Helvetica, sans-serif;
